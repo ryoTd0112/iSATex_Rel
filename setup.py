@@ -33,11 +33,11 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     description="iSATex is an ideal software package for all uses of Raman microscope and/or FT-IR. Open-source-software development from the researcher’s perspectives would be complementary with the development of the modern analytical geosciences.",
-    # entry_points={
-    #     'console_scripts': [
-    #         'isatex=isatex.main:iSATex',
-    #     ],
-    # },
+    entry_points={
+        'console_scripts': [
+            'isatex=isatex.main:iSATex',
+        ],
+    },
     # install_requires=requirements,
     install_requires=[
         'keyboard',
@@ -55,6 +55,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/ryoTd0112/isatex',
-    version='1.0.0',
+    version='0.0.14',
     zip_safe=False,
 )
