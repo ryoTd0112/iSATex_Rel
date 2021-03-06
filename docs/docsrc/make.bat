@@ -5,10 +5,10 @@ pushd %~dp0
 REM Command file for Sphinx documentation
 
 if "%SPHINXBUILD%" == "" (
-	set SPHINXBUILD=python -msphinx
+	set SPHINXBUILD=python -m sphinx
 )
 set SOURCEDIR=.
-set BUILDDIR=_build
+set BUILDDIR=..
 set SPHINXPROJ=isatex
 
 if "%1" == "" goto help
@@ -26,7 +26,8 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
-%SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+@REM %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+sphinx-build -b html %SOURCEDIR% %BUILDDIR%
 goto end
 
 :help
